@@ -1,0 +1,12 @@
+query photoQuery {
+  album(id: "dTRydwXhGQgthi1r2cKFmg") {
+    name
+    photos {
+      records {
+        urls {
+          url
+        }
+      }
+    }
+  }
+}
