@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WaldosPhotosSample</string>
+    <string name="error_no_network">Error: No Internet Connection!</string>
 </resources>

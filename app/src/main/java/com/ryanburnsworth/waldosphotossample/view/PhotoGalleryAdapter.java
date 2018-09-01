@@ -42,7 +42,8 @@ public class PhotoGalleryAdapter extends RecyclerView.Adapter<PhotoGalleryAdapte
         Glide.with(context)
                 .load(photoUrls.get(position))
                 .apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.ALL))
-                .apply(new RequestOptions().placeholder(circularProgressDrawable))
+                .apply(new RequestOptions().placeholder(circularProgressDrawable)
+                        .error(R.drawable.baseline_cloud_off_24))
                 .thumbnail(0.5f)
                 .into(holder.photo);
     }
