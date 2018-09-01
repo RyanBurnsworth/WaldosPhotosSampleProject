@@ -18,6 +18,7 @@ import javax.annotation.Nonnull;
 
 public class PhotoGalleryViewModel extends ViewModel {
     private final String TAG = "PhotoGalleryViewModel";
+    private final String SIZE_CODE = "large";
     private MutableLiveData<List<String>> photoUrlLiveDataList;
     private List<String> photoUrlList;
 
@@ -33,10 +34,11 @@ public class PhotoGalleryViewModel extends ViewModel {
             @Override
             public void onResponse(@Nonnull Response<PhotoQuery.Data> response) {
                 try {
-                    int recordSize = response.data().album().photos().records().size() - 1;
+                    int recordSize = response.data().album().photos().records().size();
                     for (int i = 0; i < recordSize; i++) {
-                        for (int j = 0; j < response.data().album().photos().records().get(i).urls().size() - 1; j++) {
-                            photoUrlList.add(response.data().album().photos().records().get(i).urls().get(j).url());
+                        for (int j = 0; j < response.data().album().photos().records().get(i).urls().size(); j++) {
+                            if (response.data().album().photos().records().get(i).urls().get(j).size_code().equals(SIZE_CODE))
+                                photoUrlList.add(response.data().album().photos().records().get(i).urls().get(j).url());
                         }
                     }
                     photoUrlLiveDataList.postValue(photoUrlList);

@@ -4,6 +4,7 @@ query photoQuery {
     photos {
       records {
         urls {
+          size_code
           url
         }
       }

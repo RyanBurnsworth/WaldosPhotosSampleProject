@@ -1,6 +1,7 @@
 package com.ryanburnsworth.waldosphotossample.view;
 
 import android.content.Context;
+import android.graphics.PorterDuff;
 import android.support.v4.widget.CircularProgressDrawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -36,6 +37,7 @@ public class PhotoGalleryAdapter extends RecyclerView.Adapter<PhotoGalleryAdapte
         CircularProgressDrawable circularProgressDrawable = new CircularProgressDrawable(context);
         circularProgressDrawable.setStrokeWidth(5f);
         circularProgressDrawable.setCenterRadius(30f);
+        circularProgressDrawable.setColorFilter(context.getColor(R.color.colorAccent), PorterDuff.Mode.OVERLAY);
         circularProgressDrawable.start();
         Glide.with(context)
                 .load(photoUrls.get(position))
