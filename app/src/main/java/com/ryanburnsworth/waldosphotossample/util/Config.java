@@ -1,0 +1,6 @@
+package com.ryanburnsworth.waldosphotossample.util;
+
+public class Config {
+    public static final String BASE_URL = "https://core-graphql.dev.waldo.photos/gql";
+    public static final String COOKIE = "__dev.waldo.auth__=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiZjdkMWI5ZWYtYWE0Yi00YjY3LWFhZjQtYzYzZmE1MDYzOWM0Iiwicm9sZXMiOlsiY29uc3VtZXIiXSwiaXNzIjoid2FsZG86Y29yZSIsImdyYW50cyI6WyJhbGJ1bXM6dmlldzpwdWJsaWMiLCJhbGJ1bXM6ZWRpdDpvd25lZCIsImFsYnVtczpjcmVhdGU6cHJpdmF0ZSIsImFsYnVtczp2aWV3OmpvaW5lZCIsImFsYnVtczpkZWxldGU6b3duZWQiLCJhbGJ1bXM6Y3JlYXRlOnB1YmxpYyIsImFsYnVtczpjcmVhdGU6b3duZWQiLCJhbGJ1bXM6dmlldzpvd25lZCJdLCJleHAiOjE1MzgzNDY5MTEsImlhdCI6MTUzNTc1NDkxMX0.3uWDYY190Qx4Ysfi1ReThyodn5PtAec2iQAN9KxSg3Q";
+}
